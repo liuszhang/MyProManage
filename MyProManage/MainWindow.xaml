@@ -1,0 +1,23 @@
+﻿<Window x:Class="MyProManage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProManage"
+        mc:Ignorable="d"
+        Title="项目一览" Height="454" Width="642" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,1">
+        <Button Content="新建项目" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+        <CheckBox x:Name="isSS" Content="实施" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" IsChecked="True" Unchecked="isSS_Unchecked" Checked="isSS_Checked" Click="isSS_Click"/>
+        <CheckBox x:Name="isSQ" Content="售前" HorizontalAlignment="Left" Margin="59,34,0,0" VerticalAlignment="Top" IsChecked="True" Checked="isSQ_Checked" Click="isSQ_Click"/>
+        <CheckBox x:Name="isQT" Content="其他" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" IsChecked="True" Click="isQT_Click"/>
+        <CheckBox x:Name="isGD" Content="归档" HorizontalAlignment="Left" Margin="59,54,0,0" VerticalAlignment="Top" IsChecked="True" Click="isGD_Click"/>
+        <ListBox x:Name="listCus" DisplayMemberPath="Name" SelectionMode="Multiple" Margin="10,74,0,33" HorizontalAlignment="Left" Width="93" MouseLeftButtonUp="listCus_MouseLeftButtonUp" SelectionChanged="listCus_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="listPro" Margin="108,10,0,33"  DisplayMemberPath="Name" MouseDoubleClick="listPro_MouseDoubleClick">
+            
+        </ListBox>
+        <TextBox x:Name="rootPath" Margin="67,0,0,10" TextWrapping="Wrap" Text="D:\00_ProjectFiles" Height="17" VerticalAlignment="Bottom"/>
+        <Button Content="根文件夹" HorizontalAlignment="Left" Margin="10,0,0,9" Height="19" VerticalAlignment="Bottom" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
